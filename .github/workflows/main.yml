@@ -17,5 +17,5 @@ jobs:
       # Use the output from the `hello` step
       - name: Get the output time
         run: |
-          echo "The memory was: ${{ steps.hello.outputs.memory }}"
+          echo ${{ steps.hello.outputs.memory }}
           echo "Memory finished..."
