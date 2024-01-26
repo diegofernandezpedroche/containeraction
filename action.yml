@@ -1,1 +1,15 @@
-
+name: 'System memory'
+description: 'System memory'
+inputs:
+  thememory:  # id of input
+    description: 'The sytemmemory'
+    required: true
+    default: '0'
+outputs:
+  thememory: # id of output
+    description: 'The system memory'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.thememory }}
