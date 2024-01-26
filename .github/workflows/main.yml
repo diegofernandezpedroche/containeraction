@@ -15,7 +15,7 @@ jobs:
         with:
           myInput: 'James'
       # Use the output from the `hello` step
-      - name: Get the system memory
+      - name: output
         run: |
           echo ${{ steps.hello.outputs.memory }}
           echo "Memory finished..."
