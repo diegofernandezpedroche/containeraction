@@ -7,7 +7,7 @@ inputs:
     required: true
     default: 'Awesome!'
 outputs:
-  myOuput: # id of output
+  myOutput: # id of output
     description: 'Total memory'
 runs:
   using: 'docker'
