@@ -1,15 +1,16 @@
 name: 'System memory'
 description: 'System memory'
+author: 'James F. Pedroche'
 inputs:
-  thememory:  # id of input
-    description: 'The systemmemory'
+  myInput:  # id of input
+    description: 'Greeting to use'
     required: true
-    default: '0'
+    default: 'Awesome!'
 outputs:
-  thememory: # id of output
-    description: 'The system memory'
+  myOuput: # id of output
+    description: 'Total memory'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.thememory }}
+    - ${{ inputs.myInput }}
