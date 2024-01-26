@@ -6,7 +6,7 @@ jobs:
     name: My first job
     steps:
       # To use this repository's private action,
-      # you mustgit a check out the repository
+      # you must git a check out the repository
       - name: Checkout
         uses: actions/checkout@v4
       - name: Run the action
