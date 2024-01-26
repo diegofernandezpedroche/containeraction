@@ -2,7 +2,7 @@ name: 'System memory'
 description: 'System memory'
 inputs:
   thememory:  # id of input
-    description: 'The sytemmemory'
+    description: 'The systemmemory'
     required: true
     default: '0'
 outputs:
