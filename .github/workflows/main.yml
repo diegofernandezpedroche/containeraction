@@ -17,5 +17,5 @@ jobs:
       # Use the output from the `hello` step
       - name: output
         run: |
-          echo ${{ steps.hello.outputs.memory }}
+          echo "${{ steps.hello.outputs.memory }}"
           echo "Memory finished..."
