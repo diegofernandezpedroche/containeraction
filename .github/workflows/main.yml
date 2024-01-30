@@ -1,5 +1,5 @@
-#on: [push] # done it
-on: workflow_dispatch
+on: [push] # done it
+#on: workflow_dispatch
 jobs:
   my-job:
     runs-on: ubuntu-latest
