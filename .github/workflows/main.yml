@@ -5,15 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     name: My first job
     steps:
-      # To use this repository's private action,
-      # you must git a check out the repository
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Run the action
-        uses: ./ # Uses an action in the root directory
-        id: hello
-        with:
-          myInput: 'James F.'
       # Approval step
       - name: Approval
         uses: trstringer/manual-approval@v1
@@ -26,6 +17,15 @@ jobs:
           exclude-workflow-initiator-as-approver: false
           additional-approved-words: ''
           additional-denied-words: ''
+      # To use this repository's private action,
+      # you must git a check out the repository
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run the action
+        uses: ./ # Uses an action in the root directory
+        id: hello
+        with:
+          myInput: 'James F.'
       # Use the output from the `hello` step
       - name: output
         run: |
