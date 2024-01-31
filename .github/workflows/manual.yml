@@ -1,0 +1,27 @@
+#on: [push] # done it 
+on: workflow_dispatch
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    name: My second job
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      # Approval step
+      - name: Approval
+        uses: trstringer/manual-approval@v1
+        with:
+          secret: ${{ github.TOKEN }}
+          approvers: dfernandezpedroche
+          minimum-approvals: 1
+          issue-title: "Test manual Deploying to prod from staging"
+          issue-body: "Please approve or deny the deployment of version v1.3.5."
+          exclude-workflow-initiator-as-approver: false
+          additional-approved-words: ''
+          additional-denied-words: ''
+      # Use the output from the `hello` step
+      - name: End of pipeline
+        run: |
+          echo "hola my friends!!!"
+          echo "Memory finished..."
