@@ -16,7 +16,7 @@ jobs:
           approvers: kubeages
           minimum-approvals: 1
           issue-title: "Test manual Deploying to prod from staging"
-          issue-body: "Please approve or deny the deployment of version v1.3.5."
+          issue-body: "Please approve or deny the deployment of version Diego pipeline test"
           exclude-workflow-initiator-as-approver: false
           additional-approved-words: ''
           additional-denied-words: ''
