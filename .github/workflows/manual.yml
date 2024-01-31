@@ -13,7 +13,7 @@ jobs:
         uses: trstringer/manual-approval@v1
         with:
           secret: ${{ github.TOKEN }}
-          approvers: dfernandezpedroche
+          approvers: dfernandezpedroche, kubeages
           minimum-approvals: 1
           issue-title: "Test manual Deploying to prod from staging"
           issue-body: "Please approve or deny the deployment of version v1.3.5."
